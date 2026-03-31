@@ -250,6 +250,32 @@ class MisoThirdPage extends StatelessWidget {
                   child: Image.network(backgroundImgUrl),
                 ),
               ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SizedBox(height: 64),
+
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      style: TextStyle(
+                        fontSize: 28,
+                        height: 1.5,
+                        color: Colors.white,
+                      ),
+                      children: [
+                        TextSpan(text: "친구 추천할 때마다\n"),
+                        TextSpan(
+                          text: "10,000원 ",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(text: "할인 쿠폰 지급!"),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 64),
+                ],
+              ),
             ],
           ),
         ),
