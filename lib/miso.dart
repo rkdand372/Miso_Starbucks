@@ -274,6 +274,22 @@ class MisoThirdPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 64),
+
+                  //자세히 보기
+                  GestureDetector(
+                    onTap: () {
+                      print("자세히 보기 클릭 됨");
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "자세히 보기",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ],
