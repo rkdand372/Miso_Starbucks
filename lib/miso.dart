@@ -287,6 +287,7 @@ class MisoThirdPage extends StatelessWidget {
                           "자세히 보기",
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
+                        Icon(Icons.chevron_right, color: Colors.white),
                       ],
                     ),
                   ),
