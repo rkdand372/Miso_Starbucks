@@ -3,7 +3,17 @@
 
 A new Flutter project.
 
-## Getting Started
+플러터로 만들어보는 화면 구현(연습용)
+
+## Learning Goals
+
+코드를 따라치며 화면 구현 과정 따라가기
+
+코드에 익숙해지면서 다양한 기능의 위젯 사용해보기
+
+필요에 따른 파일 분리 습관들이기
+
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
