@@ -293,6 +293,46 @@ class MisoThirdPage extends StatelessWidget {
                   ),
                 ],
               ),
+
+              ///친구 추천하기
+              Positioned(
+                bottom: 42,
+                child: GestureDetector(
+                  onTap: () {
+                    print("친구 추천하기 클릭 됨");
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(64),
+                      //그림자
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black,
+                          offset: Offset(0, 5),
+                          spreadRadius: 1,
+                          blurRadius: 12,
+                        ),
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(Icons.redeem, color: misoPrimaryColor),
+                        SizedBox(width: 8),
+                        Text(
+                          "친구 추천하기",
+                          style: TextStyle(
+                            color: misoPrimaryColor,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
