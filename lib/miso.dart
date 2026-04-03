@@ -347,6 +347,27 @@ class MisoFourthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Miso 네 번째 페이지")));
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 62),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "나의 정보",
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 32),
+              ),
+              SizedBox(height: 16),
+              Text(
+                "010-9999-9999",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 32),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
