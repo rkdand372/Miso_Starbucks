@@ -373,6 +373,11 @@ class MisoFourthPage extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ),
+              ListTile(
+                onTap: () => print("결제 수단 관리 클릭 됨"),
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(Icons.credit_card_outlined, color: Colors.black),
+              ),
             ],
           ),
         ),
