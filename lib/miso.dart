@@ -364,6 +364,11 @@ class MisoFourthPage extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 32),
+              ListTile(
+                onTap: () => print("주소 관리 클릭 됨"),
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(Icons.home_outlined, color: Colors.black),
+              ),
             ],
           ),
         ),
