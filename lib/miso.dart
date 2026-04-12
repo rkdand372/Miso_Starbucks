@@ -382,6 +382,15 @@ class MisoFourthPage extends StatelessWidget {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ),
+              ListTile(
+                onTap: () => print("공지사항 클릭 됨"),
+                contentPadding: EdgeInsets.all(0),
+                leading: Icon(Icons.volume_mute_outlined, color: Colors.black),
+                title: Text(
+                  "공지사항",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                ),
+              ),
             ],
           ),
         ),
