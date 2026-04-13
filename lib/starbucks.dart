@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Starbucks()));
+}
+
 /// Starbucks 메인 색상
 Color starbucksPrimaryColor = Color.fromARGB(255, 83, 184, 138);
 
@@ -108,7 +112,36 @@ class StarbucksFirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(child: Text("Starbucks 첫 번째 페이지")),
+      body: Stack(
+        children: [
+          CustomScrollView(
+            slivers: [
+              SliverAppBar(
+                automaticallyImplyLeading: false,
+                pinned: true,
+                snap: false,
+                floating: true,
+                expandedHeight: 252,
+                backgroundColor: Colors.white,
+
+                //스크롤시 사라지는 영역
+                flexibleSpace: FlexibleSpaceBar(
+                  collapseMode: CollapseMode.pin,
+                  background: Stack(
+                    children: [
+                      //백그라운드 이미지
+                      Positioned.fill(
+                        bottom: 60,
+                        child: Image.network(backImg, fit: BoxFit.fill),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
