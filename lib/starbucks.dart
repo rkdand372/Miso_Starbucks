@@ -149,6 +149,28 @@ class StarbucksFirstPage extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            SizedBox(height: 32),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "11 ★ until next Reward",
+                                        style: TextStyle(
+                                          color: starbucksAccentColor,
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
