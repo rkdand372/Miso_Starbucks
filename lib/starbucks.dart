@@ -166,9 +166,26 @@ class StarbucksFirstPage extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
+                                      SizedBox(height: 16),
+                                      ClipRRect(
+                                        borderRadius: BorderRadiusGeometry.all(
+                                          Radius.circular(10),
+                                        ),
+                                        child: LinearProgressIndicator(
+                                          backgroundColor: Colors.grey
+                                              .withValues(alpha: 0.2),
+                                          value: 0.083,
+                                          minHeight: 10,
+                                          valueColor:
+                                              AlwaysStoppedAnimation<Color>(
+                                                starbucksAccentColor,
+                                              ),
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
+                                SizedBox(width: 16),
                               ],
                             ),
                           ],
