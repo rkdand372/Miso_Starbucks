@@ -117,11 +117,11 @@ class StarbucksFirstPage extends StatelessWidget {
           CustomScrollView(
             slivers: [
               SliverAppBar(
-                automaticallyImplyLeading: false,
-                pinned: true,
-                snap: false,
-                floating: true,
-                expandedHeight: 252,
+                automaticallyImplyLeading: false, // 뒤로가기 버튼 숨기기
+                pinned: true, // 스크롤시 bottom 영역을 화면 상단에 남길지 여부
+                snap: false, // 중간에 멈출 때 자동으로 AppBar를 펼쳐서 배경을 모두 보여줄지
+                floating: true, // AppBar를 화면에 띄울지, 아니면 컬럼처럼 최 상단에 놓을지
+                expandedHeight: 252, // 최대 확장되었을 떄 높이
                 backgroundColor: Colors.white,
 
                 //스크롤시 사라지는 영역
@@ -186,6 +186,36 @@ class StarbucksFirstPage extends StatelessWidget {
                                   ),
                                 ),
                                 SizedBox(width: 16),
+                                RichText(
+                                  textAlign: TextAlign.center,
+                                  text: TextSpan(
+                                    style: TextStyle(
+                                      fontSize: 28,
+                                      color: Colors
+                                          .black, //RichText는 기본이 흰색이라 안 보임
+                                    ),
+                                    children: [
+                                      TextSpan(
+                                        text: "1",
+                                        style: TextStyle(
+                                          fontSize: 38,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: " / ",
+                                        style: TextStyle(color: Colors.grey),
+                                      ),
+                                      TextSpan(
+                                        text: "12 ★",
+                                        style: TextStyle(
+                                          color: starbucksAccentColor,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                           ],
