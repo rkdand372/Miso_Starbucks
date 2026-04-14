@@ -138,7 +138,7 @@ class StarbucksFirstPage extends StatelessWidget {
                       Positioned(
                         left: 24,
                         right: 24,
-                        bottom: 68,
+                        bottom: 60,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -222,6 +222,36 @@ class StarbucksFirstPage extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ),
+
+                ///스크롤시 남아있는 영역
+                /// SliverAppBar의 bottom은 PreferredSize 위젯으로 시작해야만 합니다.
+                bottom: PreferredSize(
+                  preferredSize: Size.fromHeight(52),
+                  child: Container(
+                    height: 52,
+                    color: Colors.white,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 24, right: 12),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () => print("What's New 클릭 됨"),
+                            child: Row(
+                              children: [
+                                Icon(Icons.mail_outline, color: Colors.grey),
+                                SizedBox(width: 8),
+                                Text(
+                                  "What's New",
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
