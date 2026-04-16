@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -264,6 +266,26 @@ class StarbucksFirstPage extends StatelessWidget {
                                 Text("Coupon", style: TextStyle(fontSize: 18)),
                               ],
                             ),
+                          ),
+                          Spacer(),
+
+                          ///Alarm
+                          Stack(
+                            children: [
+                              Icon(
+                                Icons.notifications_outlined,
+                                color: Colors.grey,
+                                size: 32,
+                              ),
+                              Positioned(
+                                right: 2,
+                                top: 2,
+                                child: CircleAvatar(
+                                  radius: 5,
+                                  backgroundColor: starbucksPrimaryColor,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
