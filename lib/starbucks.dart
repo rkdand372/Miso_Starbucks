@@ -249,6 +249,22 @@ class StarbucksFirstPage extends StatelessWidget {
                               ],
                             ),
                           ),
+                          SizedBox(width: 32),
+
+                          ///coupon
+                          GestureDetector(
+                            onTap: () => print("Coupon 클릭 됨"),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.confirmation_num_outlined,
+                                  color: Colors.grey,
+                                ),
+                                SizedBox(width: 8),
+                                Text("Coupon", style: TextStyle(fontSize: 18)),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
                     ),
