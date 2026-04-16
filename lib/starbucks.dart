@@ -293,6 +293,30 @@ class StarbucksFirstPage extends StatelessWidget {
                   ),
                 ),
               ),
+
+              /// Tip : CustomScrollView 안에서는 모든 첫 번째 위젯이 Sliver로 구현 되어야합니다.
+              /// SliverToBoxAdapter는 Container 같은 위젯이라고 보시면 됩니다.
+              SliverToBoxAdapter(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ///Frequency
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 12,
+                        vertical: 18,
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadiusGeometry.circular(8),
+                        child: Image.network(frequencyImg),
+                      ),
+                    ),
+                    SizedBox(height: 32),
+
+                    ///추천메뉴 Title
+                  ],
+                ),
+              ),
             ],
           ),
         ],
